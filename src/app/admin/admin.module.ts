@@ -4,11 +4,11 @@ import { CommonModule } from '@angular/common';
 import { AdminRoutingModule } from './admin-routing.module';
 import { HomeComponent } from './home/home.component';
 import { UserComponent } from './user/user.component';
-import { PostComponent } from './post/post.component';
+import { IndexComponent } from './post/index/index.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, UserComponent, PostComponent],
+  declarations: [HomeComponent, UserComponent, IndexComponent],
   imports: [
     CommonModule,
     AdminRoutingModule
