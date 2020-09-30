@@ -11,6 +11,25 @@ export class AppComponent {
   mySwitchVar = "one";
   isShow: boolean = true;
   name: string = 'Alex';
+  isFavorite: boolean = true;
+
+  myProducts = [
+    {
+      id: 1,
+      title: 'Gold',
+      status: 'active'
+    },
+    {
+      id: 2,
+      title: 'Silver',
+      status: 'pending'
+    },
+    {
+      id: 3,
+      title: 'Bronze',
+      status: 'expired'
+    },
+  ]
 
 
   setValueName() {

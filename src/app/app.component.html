@@ -92,6 +92,14 @@
             <button>Submit</button>
             <button type="button" (click)="resetFormValue(myForm)">Reset</button>
             <button type="button" (click)="setDefault(myForm)">Set Default Value</button>
+
+            <button [ngClass]="{
+                    'btn-success': isFavorite,
+                    'btn-primary': !isFavorite
+                }">
+                My Button
+            </button>
+            
         </form>
         
         <p>Email Field Value: {{ email.value }}</p>
@@ -119,6 +127,11 @@
         <form #myForm2="ngForm" (ngSubmit)="onSubmit(myForm2)" novalidate>
             <input name="surname" ngModel required #surname="ngModel" placeholder="surname">
             <input name="number" ngModel required #number="ngModel" placeholder="number">
+
+            <button [ngClass]="[ isFavorite ? 'btn-success' : 'btn-danger']">
+                My Button
+            </button>
+
             <button>Submit</button>
         </form>
 
@@ -133,7 +146,16 @@
     </div>
     
 
+    <div *ngFor="let product of myProducts">
 
+        <p [ngClass]="{
+        'text-success':product.status === 'active',
+        'text-primary':product.status === 'pending',
+        'text-danger':product.status === 'expired'
+        }">{{ product.title }}
+        </p>
+
+    </div>
 
 
 
