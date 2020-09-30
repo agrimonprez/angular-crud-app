@@ -1,6 +1,7 @@
 # MyCrudApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.12.
+https://itsolutionstuff.com/post/angular-10-crud-application-tutorialexample.html
 
 ## Development server
 
