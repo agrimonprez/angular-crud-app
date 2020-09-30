@@ -21,6 +21,7 @@
 
 <div class="container">
 
+        <!--     NgSwitch Example -->
     <div class="container">
         <h1>Angular NgSwitch Directive Example - ItSolutionstuff.com</h1>
     
@@ -51,21 +52,20 @@
     
     <!--     ngIf Else Condition Example-->    
     <div class="container">
+        <h1>ngIf Else Condition Example</h1>
+
         <div *ngIf="isShow; else ifNotShow">
-            <p>
-                Display if true.
-            </p>
+            <p>Display if true.</p>
         </div>
         
         <ng-template #ifNotShow>
-            <p>
-                Display if not true.
-            </p>
+            <p>Display if not true.</p>
         </ng-template>
     </div>
 
     <!--     ngIf Else Template Example -->    
     <div class="container">
+        <h1>ngIf Else Template Example</h1>
         <ng-template *ngIf="isShow;then ifShow; else ifNotShow">
         </ng-template>
     
@@ -81,6 +81,31 @@
             </p>
         </ng-template>
     </div>
+
+
+    <div class="container">
+        <h1>Angular NgForm Example</h1>
+        
+        <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)" novalidate>
+            <input name="name" ngModel required #name="ngModel" placeholder="name">
+            <input name="email" ngModel required #email="ngModel" placeholder="email">
+            <br />
+            <button>Submit</button>
+            <button type="button" (click)="resetFormValue(myForm)">Reset</button>
+            <button type="button" (click)="setDefault(myForm)">Set Default Value</button>
+        </form>
+        
+        <p>Name Field Value: {{ name.value }}</p>
+        <p>Name Field Is Valid ? : {{ name.valid }}</p>
+        
+        <p>Email Field Value: {{ email.value }}</p>
+        <p>Email Field is Valid ? : {{ email.valid }}</p>
+        
+        <p>Form value: {{ myForm.value | json }}</p>
+        <p>Form valid: {{ myForm.valid }}</p>
+    </div>
+
+
 
 
 
