@@ -5,8 +5,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { PostModule } from './post/post.module';
 import { AdminModule } from './admin/admin.module';
+import { PostModule } from './admin/post/post.module';
 
 @NgModule({
   declarations: [
@@ -15,8 +15,8 @@ import { AdminModule } from './admin/admin.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    PostModule,
     AdminModule,
+    PostModule,
     HttpClientModule
   ],
   providers: [],
