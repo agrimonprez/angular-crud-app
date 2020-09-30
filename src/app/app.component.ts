@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-crud-app';
+  mySwitchVar = "one";
+  isShow: boolean = true;
 }

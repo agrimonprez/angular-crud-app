@@ -18,6 +18,72 @@
     </nav>
 </div>
 
+
 <div class="container">
+
+    <div class="container">
+        <h1>Angular NgSwitch Directive Example - ItSolutionstuff.com</h1>
+    
+        <div [ngSwitch]="mySwitchVar">
+    
+            <div *ngSwitchCase="'one'">
+                <p>Switch Case One</p>
+            </div>
+    
+            <div *ngSwitchCase="'two'">
+                <p>Switch Case Two</p>
+            </div>
+    
+            <div *ngSwitchCase="'three'">
+                <p>Switch Case Three</p>
+            </div>
+    
+            <div *ngSwitchDefault>
+                <p>Switch Case Default</p>
+            </div>
+        </div>
+    </div>
+
+    <!--     ngIf Condition Example -->    
+    <div class="container">
+        <p *ngIf="isShow">Show this only if "show" is true</p>
+    </div>
+    
+    <!--     ngIf Else Condition Example-->    
+    <div class="container">
+        <div *ngIf="isShow; else ifNotShow">
+            <p>
+                Display if true.
+            </p>
+        </div>
+        
+        <ng-template #ifNotShow>
+            <p>
+                Display if not true.
+            </p>
+        </ng-template>
+    </div>
+
+    <!--     ngIf Else Template Example -->    
+    <div class="container">
+        <ng-template *ngIf="isShow;then ifShow; else ifNotShow">
+        </ng-template>
+    
+        <ng-template #ifShow>
+            <p>
+                Display if true
+            </p>
+        </ng-template>
+    
+        <ng-template #ifNotShow>
+            <p>
+                Display if not true.
+            </p>
+        </ng-template>
+    </div>
+
+
+
+
     <router-outlet></router-outlet>
 </div>
