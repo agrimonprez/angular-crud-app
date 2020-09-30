@@ -87,7 +87,6 @@
         <h1>Angular NgForm Example</h1>
         
         <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)" novalidate>
-            <input name="name" ngModel required #name="ngModel" placeholder="name">
             <input name="email" ngModel required #email="ngModel" placeholder="email">
             <br />
             <button>Submit</button>
@@ -95,15 +94,44 @@
             <button type="button" (click)="setDefault(myForm)">Set Default Value</button>
         </form>
         
-        <p>Name Field Value: {{ name.value }}</p>
-        <p>Name Field Is Valid ? : {{ name.valid }}</p>
-        
         <p>Email Field Value: {{ email.value }}</p>
         <p>Email Field is Valid ? : {{ email.valid }}</p>
         
         <p>Form value: {{ myForm.value | json }}</p>
         <p>Form valid: {{ myForm.valid }}</p>
     </div>
+
+    <div class="container">
+        <h1>Angular NgModel Example - Set value</h1>
+
+        <input [(ngModel)]="name" #ctrlName="ngModel" required>
+
+        <p>Value: {{ name }}</p>
+        <p>For Validation: {{ ctrlName.valid }}</p>
+
+        <button (click)="setValueName()">Set Value!</button>
+    </div>
+
+
+    <div class="container">
+        <h1>Angular NgModel Example - with ngForm</h1>
+
+        <form #myForm2="ngForm" (ngSubmit)="onSubmit(myForm2)" novalidate>
+            <input name="surname" ngModel required #surname="ngModel" placeholder="surname">
+            <input name="number" ngModel required #number="ngModel" placeholder="number">
+            <button>Submit</button>
+        </form>
+
+        <p>Surname Field Value: {{ surname.value }}</p>
+        <p>Surname Field Is Valid?: {{ surname.valid }}</p>
+
+        <p>Number Field Value: {{ number.value }}</p>
+        <p>Number Field is Valid?: {{ number.valid }}</p>
+
+        <p>Form value: {{ myForm2.value | json }}</p>
+        <p>Form valid: {{ myForm2.valid }}</p>
+    </div>
+    
 
 
 
